@@ -1,0 +1,31 @@
+ext {
+    commonDependencies = [
+            implementation: [
+                    'org.flywaydb:flyway-core',
+                    'org.springframework.boot:spring-boot-starter-actuator'
+            ],
+            compileOnly: [
+                    'org.projectlombok:lombok'
+            ],
+            developmentOnly: [
+                    'org.springframework.boot:spring-boot-devtools',
+                    'org.springframework.boot:spring-boot-docker-compose'
+            ],
+            runtimeOnly: [
+                    'org.postgresql:postgresql'
+            ],
+            annotationProcessor: [
+                    'org.springframework.boot:spring-boot-configuration-processor',
+                    'org.projectlombok:lombok'
+            ]
+    ]
+}
+
+
+ext.applyCommonDependencies = { deps ->
+    commonDependencies.each { scope, dependencyList ->
+        dependencyList.each {
+            deps."$scope" it
+        }
+    }
+}
