@@ -1,7 +1,6 @@
 ext {
     commonDependencies = [
             implementation: [
-//                    'org.flywaydb:flyway-core',
                     'org.springframework.boot:spring-boot-starter-actuator'
             ],
             compileOnly: [

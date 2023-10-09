@@ -25,8 +25,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: demonidddd08@gmail.com
-    password: eggx eglf dwsv yeru
+    username: # Указывать почту в формате xxxxx@gmail.com
+    password: # Указывать пароль от почты или пароль для сторонних приложений
     properties:
       mail:
         smtp:
@@ -35,5 +35,5 @@ spring:
             enable: true
 
 email:
-  recipient: demonidddd08@gmail.com
-  sender: demonidddd08@gmail.com
+  recipient: # Указывать почту в формате xxxxx@gmail.com
+  sender: # Указывать почту в формате xxxxx@gmail.com
