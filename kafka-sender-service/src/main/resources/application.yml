@@ -1,0 +1,27 @@
+server:
+  port: 8083
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5431/test
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: kz.alibek.kafkareceiveservice.serializer.MessageDtoSerializer
+
+  jackson:
+    default-property-inclusion: non_null
+  mvc:
+    converters:
+      preferred-json-mapper: none

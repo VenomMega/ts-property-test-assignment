@@ -1,2 +1,4 @@
-rootProject.name = 'core-banking-system'
+rootProject.name = 'test-assignment'
 include('core')
+include('kafka-sender-service')
+include('email-notification-service')
